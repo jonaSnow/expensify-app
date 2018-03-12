@@ -1,5 +1,3 @@
-'use strict';
-
 // function square (x) {
 // 	return x * x;
 // };
@@ -16,6 +14,7 @@
 // console.log(squareArrow(4));
 
 
+
 // Challenge - use arrow functions 
 // getFirstName('Mike Smith') -> 'Mike'
 // Create regular arrow function
@@ -23,14 +22,12 @@
 // store in console.log
 
 
-var getFirstName = function getFirstName(name) {
+const getFirstName = (name) => {
 	return name.split(' ')[0];
-};
+}
 
 console.log(getFirstName('Mayra MavarezFinol'));
 
-var getFirstNameArrow = function getFirstNameArrow(name) {
-	return name.split(' ')[0];
-};
+const getFirstNameArrow = (name) => name.split(' ')[0];
 
 console.log(getFirstNameArrow('Jona Guzman'));
