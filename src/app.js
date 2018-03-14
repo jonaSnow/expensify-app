@@ -1,23 +1,11 @@
 console.log('App.js is running');
 
-// if statements
-// ternary operators
-// logical operator
-
-// only render the subtitle (and p tag) if subtitle exist - logical and operator
-// render new p tag - if options.length > 0 'Here are your options' 'No options'
-
-
-// create app object title/subtitle
-// use title/subtitle
-// render template
 const appInfo = {
 	title: 'Indecision App',
 	subtitle: 'Put your life in the hands of a computer',
 	options: ['hey']
 };
 
-// JSX - JavaScript XML
 const template = (
 	<div>
 		<h1>{appInfo.title}</h1>
@@ -30,33 +18,33 @@ const template = (
 	</div>
 );
 
-// Create a templateTwo var JSX expression
-// div
-//	h1 -> Jonathan Guzman
-//	p -> Age: 27
-//	p -> Location: Conneticut
-// Render templateTwo instead template.
-const user = {
-	name: 'Jona',
-	age: 27,
-	location: 'CT'
+let count = 0;
+const addOne = () => {
+	//console.log(++count);
+	console.log('addOne');
 };
 
-function getLocation(location) {
-	if (location) {
-		return <p>Location: {location}</p>;
-	} 
-}
+const minusOne = () => {
+	//console.log(--count);
+	console.log('minusOne');
+};
+
+const reset = () => {
+	//console.log(count=0);
+	console.log('reset');
+};
 
 const templateTwo = (
 	<div>
-		<h1>{user.name ? user.name : 'Anonymous'}</h1>
-		{(user.age && user.age >= 18) && <p>Age: {user.age}</p>} 
-		{getLocation(user.location)}
+		<h1>Count: {count}</h1>
+		<button onClick={addOne}>+1</button>
+		<button onClick={minusOne}>-1</button>
+		<button onClick={reset}>reset</button>
 	</div>
 );
 
+console.log(templateTwo);
 const appRoot = document.getElementById('app');
 
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
