@@ -59,16 +59,19 @@ var renderIndecisionApp = function renderIndecisionApp() {
 		React.createElement(
 			'ol',
 			null,
-			React.createElement(
-				'li',
-				null,
-				'item one '
-			),
-			React.createElement(
-				'li',
-				null,
-				'item two '
-			)
+
+			/*  Long way
+   app.options.map((option) => {
+   	return <li key={option}>{option}</li>
+   })
+   */
+			app.options.map(function (option) {
+				return React.createElement(
+					'li',
+					{ key: option },
+					option
+				);
+			})
 		),
 		React.createElement(
 			'form',

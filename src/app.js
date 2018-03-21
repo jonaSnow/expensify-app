@@ -34,8 +34,14 @@ const renderIndecisionApp = () => {
 			<p>{app.options.length}</p>
 			<button onClick={onRemoveAll}>Remove All</button>
 			<ol>
-				<li>item one </li>
-				<li>item two </li>
+				{
+					/*  Long way
+					app.options.map((option) => {
+						return <li key={option}>{option}</li>
+					})
+					*/
+					app.options.map((option) => <li key={option}>{option}</li>)
+				}
 			</ol>
 			<form onSubmit={onFormSubmit}>
 				<input type='text' name='option'/>
