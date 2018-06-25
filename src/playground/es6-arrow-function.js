@@ -23,7 +23,7 @@
 
 
 const getFirstName = (name) => {
-	return name.split(' ')[0];
+  return name.split(' ')[0];
 }
 
 console.log(getFirstName('Mayra MavarezFinol'));

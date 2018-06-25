@@ -9,8 +9,8 @@ const nameConst = 'Frank';
 console.log('nameConst', nameConst);
 
 function getPetName() {
-	var petName = 'Chewie';
-	return petName;
+  var petName = 'Chewie';
+  return petName;
 }
 
 const petName = getPetName();
@@ -22,8 +22,8 @@ var fullName = 'Yona Guzman';
 let firstName;
 
 if (fullName) {
-	firstName = fullName.split(' ')[0];
-	console.log(firstName);
+  firstName = fullName.split(' ')[0];
+  console.log(firstName);
 }
 
 console.log(firstName);
